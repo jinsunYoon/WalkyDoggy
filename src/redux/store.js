@@ -6,13 +6,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import thunkMiddleware from 'redux-thunk'
 
 // * import slices
-
+import contentsSlice from './modules/contentsSlice'
 
 export const history = createBrowserHistory()
 
 // * reducers
 const reducer = combineReducers({
     router: connectRouter(history),
+    contentsSlice: contentsSlice.reducer,
 })
 
 const middlewares = [thunkMiddleware]
