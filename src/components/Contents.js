@@ -51,11 +51,9 @@ const Contents = (props) => {
         // element가 바뀔때마다 동작
         const currentElement = element
         const currentObserver = observer.current
-
         if (currentElement) {
             currentObserver.observe(currentElement)
         }
-
         return () => {
             if (currentElement) {
                 currentObserver.unobserve(currentElement)
