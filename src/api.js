@@ -5,6 +5,6 @@ const instance = axios.create({
     baseURL: 'https://my-json-server.typicode.com',
 })
 
-export const getAPI = () => {
-    return instance.get('/dmlafiki/jsons/data/2')
+export const api = {
+    getAPI: (id) => instance.get(`/dmlafiki/jsons/data/${id}`),
 }
